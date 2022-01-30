@@ -6,7 +6,7 @@ authors = ["Danil Maximov"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10"
 fastapi = "^0.73.0"
 celery = "^5.2.3"
 sqlmodel = "^0.0.6"
