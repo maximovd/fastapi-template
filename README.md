@@ -1,7 +1,12 @@
 # FasAPI cookiecutter template
 
-For usage run:
+## Installation:
 ```shell
 cookiecutter https://github.com/maximovd/fastapi-template.git
 ```
-And follow the instructions
+
+
+
+## License
+
+[MIT](https://github.com/maximovd/fastapi-template/blob/main/LICENSE)
