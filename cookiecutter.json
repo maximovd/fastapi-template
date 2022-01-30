@@ -7,6 +7,7 @@
   ],
   "secret_key": "changethis",
   "backend_cors_origins": "[\"http://localhost\", \"http://localhost:8000\", \"https://localhost\", \"https://localhost:3000\", \"https://localhost:8000\"]",
-  "postgres_password": "changethis",
+  "postgres_password": "123456",
+  "first_superuser_password": "123456",
   "flower_auth": "admin:{{cookiecutter.first_superuser_password}}"
 }

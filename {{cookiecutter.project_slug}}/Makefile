@@ -11,12 +11,12 @@ help:
 
 
 docker_req_install:
-	{% if cookiecutter.package_manger == 'pipenv' %}
+	{% if cookiecutter.package_manager == 'pipenv' %}
 		pipenv install --system
 	{% else %}
 		poetry config virtualenvs.create false
 		poetry install --no-root
-
+	{% endif %}
 migrate:
 	alembic upgrade head
 
