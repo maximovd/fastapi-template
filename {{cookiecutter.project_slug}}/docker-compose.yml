@@ -1,0 +1,33 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:13
+    volumes:
+      - app-db-data:/var/lib/postgresql/data/pgdata
+    env_file:
+      - .env
+    environment:
+      - PGDATA=/var/lib/postgresql/data/pgdata
+
+  queue:
+    image: rabbitmq:3
+
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+  celeryworker:
+    depends_on:
+      - db
+      - queue
+    env_file:
+      - .env
+
+
+volumes:
+  app-db-data:
