@@ -10,4 +10,4 @@ RUN pip3 install poetry
 RUN pip3 install pipenv
 {% endif %}
 
-CMD ["bin/sh", "code/entrypoint.sh"]
+CMD ["/bin/sh", "code/entrypoint.sh"]
