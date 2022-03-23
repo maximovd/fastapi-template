@@ -22,6 +22,7 @@ services:
       - db
 
   celeryworker:
+    build: .
     command: sh celery.entrypoint.sh
     depends_on:
       - db
