@@ -7,16 +7,16 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-fastapi = "^0.73.0"
-celery = "^5.2.3"
-sqlmodel = "^0.0.6"
-alembic = "^1.7.5"
-uvicorn = "^0.17.1"
+fastapi = "*"
+celery = "*"
+sqlmodel = "*"
+alembic = "*"
+uvicorn = "*"
 
 [tool.poetry.dev-dependencies]
-flake8 = "^4.0.1"
-mypy = "^0.931"
-pytest = "^6.2.5"
+flake8 = "*"
+mypy = "*"
+pytest = "*"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
