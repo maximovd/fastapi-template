@@ -1,5 +1,8 @@
 FROM python:3.10
 
+RUN apt-get update && apt-get -y install gcc
+RUN pip3 install --upgrade pip
+
 WORKDIR /code
 
 COPY . code/
