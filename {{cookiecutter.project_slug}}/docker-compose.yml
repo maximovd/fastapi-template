@@ -23,7 +23,7 @@ services:
 
   celeryworker:
     build: .
-    command: sh celery.entrypoint.sh
+    command: celery -A app.worker worker -l info
     depends_on:
       - db
       - queue
@@ -34,8 +34,11 @@ services:
     image: mher/flower
     env_file:
       - .env
-    command:
-      - "--broker=amqp://guest@queue:5672//"
+    environment:
+      - CELERY_BROKER_URL=amqp://guest@queue:5672//
+      - FLOWER_PORT=8888
+    ports:
+      - 8888:8888
 
 volumes:
   app-db-data:
