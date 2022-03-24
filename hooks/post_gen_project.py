@@ -3,8 +3,10 @@ import os
 def choice_package_manger():
     if "{{ cookiecutter.package_manager }}".lower() == "poetry":
         os.remove("Pipfile")
+        os.remove("Pipfile.lock")
     else:
         os.remove("pyproject.toml")
+        os.remove("poetry.lock")
 
 def extract_env_variables():
     with open(".env.example", "r") as example_file, open(".env", "a") as target_file:
