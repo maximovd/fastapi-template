@@ -1,5 +1,4 @@
-# /bin/sh
+#!/bin/bash
 
-make docker_req_install
 make migrate
 make run

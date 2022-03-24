@@ -1,5 +1,3 @@
-
-
 .PHONY: all
 
 SHELL=/bin/bash -e
@@ -9,14 +7,6 @@ SHELL=/bin/bash -e
 
 help:
 	echo 'Change this help message'
-
-docker_req_install:
-	{% if cookiecutter.package_manager == 'pipenv' %}
-	pipenv install --system
-	{% else %}
-	poetry config virtualenvs.create false
-	poetry install --no-root
-	{% endif %}
 
 migrate:
 	alembic upgrade head
