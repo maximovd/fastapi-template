@@ -2,7 +2,7 @@ from typing import Any
 
 from fastapi import APIRouter
 
-from app import models, schemas
+from app import schemas
 from app.core.celery_app import celery_app
 
 router = APIRouter()
