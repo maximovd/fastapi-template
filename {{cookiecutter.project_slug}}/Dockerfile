@@ -11,6 +11,8 @@ RUN pip3 install --upgrade pip
 COPY ./pyproject.toml /code/pyproject.toml
 COPY ./poetry.lock /code/poetry.lock
 RUN pip3 install poetry
+RUN poetry config virtualenvs.create false
+RUN poetry install
 {% else %}
 COPY ./Pipfile /code/Pipfile
 COPY ./Pipfile.lock /code/Pipfile.lock
