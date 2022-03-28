@@ -12,6 +12,8 @@ celery = "*"
 sqlmodel = "*"
 alembic = "*"
 uvicorn = "*"
+psycopg2 = "*"
+python-dotenv = "^0.20.0"
 
 [tool.poetry.dev-dependencies]
 flake8 = "*"
