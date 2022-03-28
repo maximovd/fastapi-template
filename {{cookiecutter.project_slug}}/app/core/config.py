@@ -39,11 +39,12 @@ class Settings(BaseSettings):
             path=f"/{values.get('POSTGRES_DB') or ''}",
         )
 
-    CELERY_BROKER: str = "amqp://guest@queue//"
+    CELERY_BROKER: str = "amqp://user:bitnami@queue:5672//"
     CELERY_APP_NAME: str = "worker"
 
     class Config:
         case_sensitive = True
+        env_file = ".env"
 
 
 settings = Settings()
